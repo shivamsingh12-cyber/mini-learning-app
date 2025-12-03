@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+  mongo-learning:
+    image: mongo:7
+    container_name: mongo-learning
+    restart: unless-stopped
+    ports:
+      - "27018:27017"   # optional: only if you want to connect via Compass
+    volumes:
+      - mongo_learning_data:/data/db
+
+  learning-backend:
+    build:
+      context: ./learning-app-backend
+    container_name: learning-backend
+    command: npm run dev
+    environment:
+      - MONGO_URL=mongodb://mongo-learning:27017/learningApp
+      - JWT_SECRET=supersecretjwt
+      - CLIENT_URL=http://localhost:5173
+      - PORT=5001
+    ports:
+      - "5001:5001"
+    depends_on:
+      - mongo-learning
+    volumes:
+      - ./learning-app-backend:/app
+      - /app/node_modules
+
+  learning-frontend:
+    build:
+      context: ./learning-app-frontend
+    container_name: learning-frontend
+    command: npm run dev -- --host 0.0.0.0 --port 5173
+    ports:
+      - "5173:5173"
+    depends_on:
+      - learning-backend
+    volumes:
+      - ./learning-app-frontend:/app
+      - /app/node_modules
+
+volumes:
+  mongo_learning_data:
