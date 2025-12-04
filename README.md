@@ -39,11 +39,11 @@
 
 - CORS-enabled API for frontend communication
 
-## Tech Stack
-# Frontend
+# Tech Stack
+## Frontend
 - React (TypeScript)
 
-# Backend
+## Backend
 
 - Node.js + Express
 
@@ -69,3 +69,33 @@ root/
 │
 └── docker-compose.learning.yml
 ```
+
+# ⚙️ Installation (Local Development)
+ 1. Clone the repository
+    * git clone <repo-url>
+    * cd <repo-folder>
+ 2. Install backend dependencies
+    * cd learning-app-backend
+    * npm install
+ 3. Install frontend dependencies
+    * cd learning-app-frontend
+    * npm install
+ 4. Environment Variables
+ Create learning-app-backend/.env
+    ```bash
+MONGO_URL=mongodb://mongo-learning:27017/learningApp
+JWT_SECRET=****
+CLIENT_URL=http://localhost:5173
+PORT=your_port
+    ```
+ 4. Start backend server
+    * npm run dev
+
+## Running with Docker (Dev Mode)
+    1. Build and Start Container
+        From the root folder
+        ```bash
+        - docker compose up --build
+        ```
+
+
