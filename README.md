@@ -1,7 +1,7 @@
 # Mini Learning App
-# An interactive web-based learning platform inspired by Duolingo-style lessons.
-# Users learn through structured lessons, take quizzes, earn XP, track progress, and compete on a leaderboard.
-# Admins can create and manage lessons via a built-in CMS panel.
+- An interactive web-based learning platform inspired by Duolingo-style lessons.
+- Users learn through structured lessons, take quizzes, earn XP, track progress, and compete on a leaderboard.
+- Admins can create and manage lessons via a built-in CMS panel.
 
 ## 🚀 Features
 
