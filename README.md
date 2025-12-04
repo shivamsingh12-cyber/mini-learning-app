@@ -6,20 +6,20 @@
 ## 🚀 Features
 
 ## 🎓 User Features
-### User authentication (register, login)
+- User authentication (register, login)
 
-### Browse lessons with categorized levels
+- Browse lessons with categorized levels
 
-### Take quizzes with instant scoring
+- Take quizzes with instant scoring
 
-### Earn XP per correct answer
+- Earn XP per correct answer
 
-### Track lesson progress
+- Track lesson progress
 
-### View global leaderboard
+- View global leaderboard
 
 ## 🛠 Admin Features
-# Create lessons
+- Create lessons
 
 - Add multiple-choice questions
 
@@ -29,15 +29,15 @@
 
 ## 📊 System Features
 
-### JWT-based authentication
+- JWT-based authentication
 
-### Embedded questions inside lesson documents
+- Embedded questions inside lesson documents
 
-### XP scoring logic inside backend
+- XP scoring logic inside backend
 
-### Progress tracking per user per lesson
+- Progress tracking per user per lesson
 
-### CORS-enabled API for frontend communication
+- CORS-enabled API for frontend communication
 
 ## Tech Stack
 # Frontend
