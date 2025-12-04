@@ -11,8 +11,7 @@ services:
       - mongo_learning_data:/data/db
 
   learning-backend:
-    build:
-      context: ./learning-app-backend
+    image: shivamsingh6490/learning-backend:dev
     container_name: learning-backend
     command: npm run dev
     environment:
@@ -29,8 +28,7 @@ services:
       - /app/node_modules
 
   learning-frontend:
-    build:
-      context: ./learning-app-frontend
+    image: shivamsingh6490/learning-frontend:dev
     container_name: learning-frontend
     command: npm run dev -- --host 0.0.0.0 --port 5173
     ports:
