@@ -81,21 +81,20 @@ root/
     * cd learning-app-frontend
     * npm install
  4. Environment Variables
- Create learning-app-backend/.env
-    ```bash
-MONGO_URL=mongodb://mongo-learning:27017/learningApp
-JWT_SECRET=****
-CLIENT_URL=http://localhost:5173
-PORT=your_port
-    ```
- 4. Start backend server
+ * Create learning-app-backend/.env
+ 
+- MONGO_URL=mongodb://mongo-learning:27017/learningApp
+- JWT_SECRET=****
+- CLIENT_URL=http://localhost:5173
+- PORT=your_port
+
+ 4. Start frontend and backend with this cmd
     * npm run dev
 
 ## Running with Docker (Dev Mode)
     1. Build and Start Container
         From the root folder
-        ```bash
-        - docker compose up --build
-        ```
+        docker compose up --build
+     
 
 
